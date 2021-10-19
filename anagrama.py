@@ -6,13 +6,11 @@ depois ordena as letras através do método
 sorted, aí compara as duas se forem iguais
 Retorna True caso contrário retorna False
 '''
-def anagrama (s1,s2):
-  s1=sorted (s1)
-  s2=sorted (s2)
-  if s1 == s2:
-    return True
-  else:
-    return False
+def anagrama(s1,s2):
+  s1 = s1.replace(' ','').lower() ###retira espaços da palavra
+  s2 = s2.replace(' ','').lower() ###retira espaços da palavra
+
+  return sorted(s1) == sorted(s2) ###retorna o resultado logico se letras iguais True se não False
 
 s1='marrocos'
 s2='socorram'
